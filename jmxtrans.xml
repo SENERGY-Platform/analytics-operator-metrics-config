@@ -11,8 +11,10 @@
                resultAlias="jvm.nonHeapMemoryUsage.committed"/>
 
         <!-- Kafka -->
-        <query objectName="kafka.streams:type=stream-metrics,client-id=*" attribute="process-rate"
+        <query objectName="kafka.streams:type=stream-thread-metrics,thread-id=*" attribute="process-rate"
                resultAlias="kafka.process-rate"/>
+        <query objectName="kafka.streams:type=stream-thread-metrics,thread-id=*" attribute="commit-rate"
+               resultAlias="kafka.commit-rate"/>
 
 
     </queries>
